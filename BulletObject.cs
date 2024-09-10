@@ -5,34 +5,24 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Create BulletAsset")]
 public class BulletObject : ScriptableObject
 {
-    [Header("×Óµ¯µÄ³õÊ¼ÅäÖÃ")]
-    //ÉúÃüÖÜÆÚ
+    [Header("å­å¼¹çš„åˆå§‹é…ç½®")]
+    //ç”Ÿå‘½å‘¨æœŸ
     public float LifeCycle = 5;
-    //ÏßËÙ¶È
     public float LinearVelocity = 0;
-    //Ïß¼ÓËÙ¶È
     public float Acceleration = 0;
-    //½ÇËÙ¶È
     public float AngularVelocity = 0;
-    //½Ç¼ÓËÙ¶È
     public float AngularAcceleration = 0;
-    //×î´óËÙ¶È
     public float MaxVelocity = int.MaxValue;
 
-    [Header("·¢ÉäÆ÷³õÊ¼ÅäÖÃ")]
-
-    //³õÊ¼Ğı×ª½Ç¶È
+    [Header("å‘å°„å™¨åˆå§‹é…ç½®")]
     public float InitRotation = 0;
-    //·¢ÉäÆ÷½ÇËÙ¶È
     public float SenderAngularVelocity = 0;
     public float SenderMaxAngularVelocity=int.MaxValue;
     public float SenderAcceleration=0;
-    //×Óµ¯ÏßÊıÁ¿ºÍ¼Ğ½Ç
     public int Count = 0;
     public float LineAngle = 30;
-    //·¢Éä¼ä¸ô
     public float SenderInterval = 0.1f;
-    [Header("Ô¤ÖÆÌå")]
+    [Header("é¢„åˆ¶ä½“")]
     public GameObject prefabs;
 
 }
