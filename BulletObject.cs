@@ -6,7 +6,7 @@ using UnityEngine;
 public class BulletObject : ScriptableObject
 {
     [Header("子弹的初始配置")]
-    //生命周期
+    
     public float LifeCycle = 5;
     public float LinearVelocity = 0;
     public float Acceleration = 0;
