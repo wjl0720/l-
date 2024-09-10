@@ -3,30 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BulletBehaviour : MonoBehaviour
-{ //ÏßËÙ¶È
+{ 
     public float LinearVelocity = 0;
-    //Ïß¼ÓËÙ¶È
     public float Acceleration = 0;
-    //½ÇËÙ¶È
-    public float AngularVelocity = 0;
-    //½Ç¼ÓËÙ¶È
+    public float AngularVelocity = 0ï¼›
     public float AngularAcceleration = 0;
-    //×î´óËÙ¶È
     public float MaxVelocity= int.MaxValue;
-    //ÉúÃüÖÜÆÚ
     public float LifeTime = 5f;
 
     private void FixedUpdate()
-    {//¸üĞÂµ±Ç°µÄÏßËÙ¶ÈºÍ½ÇËÙ¶È
+    {
         LinearVelocity = Mathf.Clamp(LinearVelocity+Acceleration * Time.fixedDeltaTime,-MaxVelocity,MaxVelocity);
         AngularVelocity += AngularAcceleration * Time.fixedDeltaTime;
-        //¸üĞÂ×Óµ¯Î»ÖÃ
+        
         transform.Translate(LinearVelocity * Vector2.right * Time.fixedDeltaTime,Space.Self);
 
         transform.rotation*=Quaternion.Euler(new Vector3(0,0,1)*AngularVelocity*Time.fixedDeltaTime);
 
         LifeTime-=Time.fixedDeltaTime;
-        //ÉúÃü½áÊø£¬Ïú»ÙÎïÌå
+        
         if (LifeTime < 0)
         {
             Destroy(gameObject);
